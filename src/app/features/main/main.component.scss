@@ -1,0 +1,92 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 100vh;
+}
+
+.left-section {
+    background-color: #f2f4f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+    padding: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+
+.box1, .box2, .box3 {
+    background-color: white;
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 13px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.box1 {
+    grid-column: 1/2;
+}
+
+.box2 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.box3 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.comp-name, .icon {
+    font-size: 25px;
+}
+
+.icon {
+    color: rgb(17, 17, 154);
+}
+
+.bottom-text {
+    color: rgb(160, 160, 160);
+}
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.title-header {
+    text-align: left;
+    width: 470px;
+}
+
+.title {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.sub-title {
+    font-size: 15px;
+    color: gray;
+}
+
+@media only screen and (max-width: 867px) {
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .left-section {
+        display: none;
+    }
+    
+}
