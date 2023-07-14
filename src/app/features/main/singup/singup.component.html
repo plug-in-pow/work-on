@@ -1,0 +1,49 @@
+<div class="form" [formGroup]="singupForm">
+    <div class="input-field">
+        <i class="icon fa-regular fa-envelope"></i>
+        <input placeholder="Type Email" class="text-field" type="text" formControlName="email">
+        <div class="err-text" *ngIf="(email?.dirty || email?.touched) && email?.invalid">
+            <div *ngIf="email?.hasError('required')">
+                <i class="fa-regular fa-bell" style="color: #ff0000;"></i>
+                Email is required
+            </div>
+            <div *ngIf="email?.hasError('email')">
+                <i class="fa-regular fa-bell" style="color: #ff0000;"></i>
+                Email is incorrect
+            </div>
+        </div>
+    </div>
+    <div class="input-field">
+        <i class="icon fa-solid fa-lock"></i>
+        <input placeholder="Type Password" class="text-field" type="password" formControlName="password">
+        <div class="err-text" *ngIf="(password?.dirty || password?.touched) && password?.invalid">
+            <div *ngIf="password?.hasError('required')">
+                <i class="fa-regular fa-bell" style="color: #ff0000;"></i>
+                Password is required
+            </div>
+            <div *ngIf="password?.hasError('minlength')">
+                <i class="fa-regular fa-bell" style="color: #ff0000;"></i>
+                Password length should be more than 4
+            </div>
+            <div *ngIf="password?.hasError('maxlength')">
+                <i class="fa-regular fa-bell" style="color: #ff0000;"></i>
+                Password length should less than 11
+            </div>
+        </div>
+    </div>
+    <div class="input-field">
+        <i class="icon fa-solid fa-unlock"></i>
+        <input placeholder="Renter Password" class="text-field" type="text" formControlName="renterPassword">
+        <div class="err-text" *ngIf="(renterPassword?.dirty || renterPassword?.touched) && renterPassword?.invalid">
+            <div *ngIf="renterPassword?.hasError('required')">
+                <i class="fa-regular fa-bell" style="color: #ff0000;"></i>
+                Please renter Password
+            </div>
+        </div>
+    </div>
+    <div class="grid-item">
+        <button type="submit" class="btn" [disabled]="singupForm.invalid">SingUp</button>
+        <button type="button" class="btn" (click)="clearForm()">Clear</button>
+    </div>
+    <span class="below-text">Already a member? <span class="bottom-link" (click)="goBack()">Login</span></span>
+</div>

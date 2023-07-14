@@ -1,0 +1,9 @@
+.grid-item {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.grid-item .btn:nth-child(2) {
+    background-color: rgb(60, 60, 60);
+}

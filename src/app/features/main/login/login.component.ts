@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,8 +11,12 @@ export class LoginComponent implements OnInit {
 
   showPassword: boolean = false;
   loginForm!: FormGroup;
-
-  constructor(private fb:FormBuilder) { }
+  bannerInfo: { message: string; showBanner: boolean } = {
+    message: '',
+    showBanner: false
+  };
+ 
+  constructor(private fb:FormBuilder, private router:Router) { }
 
   ngOnInit(): void {
     this.createForm();
@@ -29,6 +34,16 @@ export class LoginComponent implements OnInit {
     let ele: HTMLInputElement = document.getElementById('text-field') as HTMLInputElement;
     ele.type = ele.type === 'password' ? 'text' : 'password';
     this.showPassword = !this.showPassword;
+  }
+
+  goToSingup() {
+    this.router.navigate(['auth/singup']);
+  }
+
+  submit() {
+    this.bannerInfo = {
+      ...this.bannerInfo, 'message': 'Login Successfully', 'showBanner': true
+    }
   }
 
   get username() { return this.loginForm.get('username'); }

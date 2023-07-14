@@ -1,0 +1,6 @@
+<div id="banner-card" *ngIf="bannerInfo.showBanner">
+    <span>{{ bannerInfo.message }}</span>
+    <button type="button" class="icon-btn" (click)="close()">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+</div>
