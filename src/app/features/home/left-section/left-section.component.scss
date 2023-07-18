@@ -1,0 +1,122 @@
+.container {
+    background-color: #1c2537;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.app-logo {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.bottom-profile {
+    padding: 10px;
+}
+
+.bottom-container {
+    height: 30px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    padding: 10px;
+    justify-items: center;
+    align-items: center;
+    background-color: #28364f;
+    border-radius: 10px;
+}
+
+.bottom-icon {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.email-id-text {
+    color: white;
+}
+
+.flex-container > .nav-btn {
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.section-title {
+    color: rgb(144, 144, 144);
+    font-size: 14px;
+}
+
+.input-box {
+    position: relative;
+}
+
+.input-box i {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    color: white;
+}
+
+.search-box {
+    padding-inline-start: 36px;
+    width: 84%;
+    background-color: #18202f;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.search-box:focus {
+    outline: 1px solid white;
+}
+
+.nav-btn {
+    background-color: transparent;
+    padding-left: 10px;
+    color: white;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.nav-btn.selected {
+    background-color: #28364f;
+    color: white;
+}
+
+.count-box {
+    flex: 1;
+    text-align: right;
+    position: relative;
+}
+
+.count {
+    width: 10px;
+    padding: 0 10px;
+    border-radius: 30px;
+    background-color: white;
+    color: #18202f;
+    font-weight: 600;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+}
+
+hr {
+    border: 1px solid #dedede;
+}

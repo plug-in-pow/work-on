@@ -41,9 +41,10 @@ export class LoginComponent implements OnInit {
   }
 
   submit() {
-    this.bannerInfo = {
-      ...this.bannerInfo, 'message': 'Login Successfully', 'showBanner': true
-    }
+    // this.bannerInfo = {
+    //   ...this.bannerInfo, 'message': 'Login Successfully', 'showBanner': true
+    // }
+    this.router.navigate(['home'])
   }
 
   get username() { return this.loginForm.get('username'); }
