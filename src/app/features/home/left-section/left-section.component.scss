@@ -97,6 +97,18 @@
 .nav-btn.selected {
     background-color: #28364f;
     color: white;
+    animation: selectAnimation;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+
+@keyframes selectAnimation {
+    from {
+        background-color: transparent;
+    }
+    to {
+        background-color: #28364f;
+    }
 }
 
 .count-box {

@@ -9,32 +9,24 @@
             <input type="text" placeholder="Search Todo" class="search-box">
         </div>
         <span class="section-title">Menu</span>
-        <button type="button" class="nav-btn selected">
-            <i class="fa-solid fa-list-ul"></i>
-            Todo List
-            <div class="count-box">
+        <button *ngFor="let tab of menuTabs" type="button" class="nav-btn" (click)="onTabClick(tab.id)" [ngClass]="{'selected': tab.active}" [routerLink]="[tab.route]">
+            <span class="material-icons">{{tab.icon}}</span>
+            {{tab.id | titlecase}}
+            <div *ngIf="tab.id === 'todo'" class="count-box">
                 <div class="count">0</div>
             </div>
         </button>
-        <button type="button" class="nav-btn">
-            <i class="fa-regular fa-calendar"></i>
-            Calender
-        </button>
         <span class="section-title">Others</span>
-        <button type="button" class="nav-btn">
-            <i class="fa-solid fa-fill-drip"></i>
-            Theme
-        </button>
-        <button type="button" class="nav-btn">
-            <i class="fa-solid fa-sliders"></i>
-            Settings
+        <button *ngFor="let tab of otherTabs" type="button" class="nav-btn" (click)="onTabClick(tab.id)" [ngClass]="{'selected': tab.active}" [routerLink]="[tab.route]">
+            <span class="material-icons">{{tab.icon}}</span>
+            {{tab.id | titlecase}}
         </button>
     </div>
     <div class="bottom-profile">
         <div class="bottom-container">
-            <i class="bottom-icon fa-regular fa-circle-user"></i>
+            <span class="material-icons bottom-icon">account_circle</span>
             <div class="email-id-text">abc@gmail.com</div>
-            <i class="bottom-icon fa-solid fa-arrow-right-from-bracket"></i>
+            <span class="material-icons bottom-icon">logout</span>
         </div>
     </div>
 </div>

@@ -4,6 +4,9 @@ import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { LeftSectionComponent } from './left-section/left-section.component';
 import { RightSectionComponent } from './right-section/right-section.component';
+import { TodoComponent } from './todo/todo.component';
+import { CalenderComponent } from './calender/calender.component';
+import { SettingsComponent } from './settings/settings.component';
 
 
 
@@ -11,7 +14,10 @@ import { RightSectionComponent } from './right-section/right-section.component';
   declarations: [
     HomeComponent,
     LeftSectionComponent,
-    RightSectionComponent
+    RightSectionComponent,
+    TodoComponent,
+    CalenderComponent,
+    SettingsComponent
   ],
   imports: [
     CommonModule,

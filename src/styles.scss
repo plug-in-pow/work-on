@@ -95,3 +95,11 @@ input:focus {
     color: #157afe;
     cursor: pointer;
 }
+
+.Right-container {
+    padding: 5vh;
+    background-color: rgb(243, 243, 243);
+    height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}

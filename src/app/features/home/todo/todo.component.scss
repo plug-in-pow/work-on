@@ -1,0 +1,74 @@
+.action-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+.view-action {
+    display: flex;
+    gap: 20px;
+    color: gray;
+    cursor: pointer;
+}
+
+.view-action .selected {
+    color: black;
+}
+
+.sort-action {
+    cursor: pointer;
+}
+
+.todo-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+}
+
+.card {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    p {
+        overflow: hidden;
+    }
+}
+
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(88, 88, 88);
+    font-size: 14px;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.add-btn {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #1c2537;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}

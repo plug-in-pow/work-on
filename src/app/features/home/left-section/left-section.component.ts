@@ -7,9 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeftSectionComponent implements OnInit {
 
+  menuTabs: any[] = [
+    { id: "todo", icon: "format_list_bulleted", route: "todo", active: true },
+    { id: "calender", icon: "event", route: "calender", active: false }
+  ];
+  otherTabs: any[] = [
+    { id: "theme", icon: "palette", route: "todo", active: false },
+    { id: "settings", icon: "tune", route: "settings", active: false }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onTabClick(id: string): void {
+    this.menuTabs.forEach(tab => {
+     tab.active = tab.id === id;
+    }); 
+    this.otherTabs.forEach(tab => {
+      tab.active = tab.id === id;
+    });
   }
 
 }
