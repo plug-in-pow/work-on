@@ -17,11 +17,17 @@
     color: black;
 }
 
-.sort-action {
-    cursor: pointer;
+.message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    flex-direction: column;
+    gap: 10px;
+    color: grey;
 }
 
-.todo-list {
+.todo-list-row {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
@@ -29,7 +35,8 @@
     justify-content: left;
 }
 
-.card {
+.card-row {
+    cursor: pointer;
     background-color: white;
     padding: 10px;
     border-radius: 10px;
@@ -44,16 +51,51 @@
     }
 }
 
-.bottom-section {
+.todo-list-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+}
+
+.card-column {
+    cursor: pointer;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    p {
+        overflow: hidden;
+    }
+}
+
+.card-row .bottom-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: rgb(88, 88, 88);
-    font-size: 14px;
+    font-size: 12px;
 }
 
-.icon {
-    cursor: pointer;
+.card-column .bottom-section {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: rgb(88, 88, 88);
+    font-size: 12px;
+}
+
+.icon-pin-inactive {
+    color: rgb(167, 167, 167);
+}
+
+.icon-pin-active {
+    color: black;
 }
 
 .add-btn {

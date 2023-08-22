@@ -44,6 +44,16 @@
     grid-row: 3/4;
 }
 
+.box3 p:nth-child(3) {
+    display: flex;
+    align-items: center;
+}
+
+.box3 p:nth-child(5) {
+    display: flex;
+    align-items: center;
+}
+
 .comp-name, .icon {
     font-size: 25px;
 }
@@ -62,6 +72,12 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .title-header {

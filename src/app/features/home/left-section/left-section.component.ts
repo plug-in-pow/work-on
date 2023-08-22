@@ -12,7 +12,6 @@ export class LeftSectionComponent implements OnInit {
     { id: "calender", icon: "event", route: "calender", active: false }
   ];
   otherTabs: any[] = [
-    { id: "theme", icon: "palette", route: "todo", active: false },
     { id: "settings", icon: "tune", route: "settings", active: false }
   ];
 

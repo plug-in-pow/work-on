@@ -10,6 +10,8 @@
     color: white;
     font-size: 25px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .flex-container {
@@ -62,11 +64,12 @@
     position: relative;
 }
 
-.input-box i {
+.input-box span {
     position: absolute;
-    top: 12px;
+    top: 10px;
     left: 10px;
-    color: white;
+    color: rgb(196, 196, 196);
+    font-size: 20px;
 }
 
 .search-box {

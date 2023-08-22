@@ -1,11 +1,11 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-message-banner',
   templateUrl: './message-banner.component.html',
   styleUrls: ['./message-banner.component.scss']
 })
-export class MessageBannerComponent implements OnInit, OnChanges {
+export class MessageBannerComponent implements OnInit {
 
   @Input() bannerInfo: { message: string; showBanner: boolean } = {
     "message": '',
@@ -13,10 +13,6 @@ export class MessageBannerComponent implements OnInit, OnChanges {
   }
 
   constructor() { }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes)
-  }
 
   ngOnInit(): void {
   }

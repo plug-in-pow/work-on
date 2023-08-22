@@ -1,7 +1,7 @@
 <div class="form" [formGroup]="loginForm">
     <app-message-banner [bannerInfo]="bannerInfo"></app-message-banner>
     <div class="input-field">
-        <i class="icon fa-regular fa-envelope"></i>
+        <span class="icon material-icons">alternate_email</span>
         <input placeholder="Email" class="text-field" type="text" formControlName="username" required>
         <div class="err-text" *ngIf="(username?.dirty || username?.touched) && username?.invalid">
             <i class="fa-regular fa-bell" style="color: #ff0000;"></i>
@@ -9,8 +9,8 @@
         </div>
     </div>
     <div class="input-field">
-        <i class="icon fa-solid fa-lock"></i>
-        <i [ngClass]="showPassword ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'" class="icon" (click)="togglePass()"></i>
+        <span class="icon material-icons">password</span>
+        <span class="icon material-icons" (click)="togglePass()">{{ showPassword ? 'visibility' : 'visibility_off' }}</span>
         <input placeholder="Password" id="text-field" class="text-field" type="password" formControlName="password" required>
         <div class="err-text" *ngIf="(password?.dirty || password?.touched) && password?.invalid">
             <i class="fa-regular fa-bell" style="color: #ff0000;"></i>

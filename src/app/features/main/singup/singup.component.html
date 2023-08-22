@@ -1,6 +1,6 @@
 <div class="form" [formGroup]="singupForm">
     <div class="input-field">
-        <i class="icon fa-regular fa-envelope"></i>
+        <span class="icon material-icons">alternate_email</span>
         <input placeholder="Type Email" class="text-field" type="text" formControlName="email">
         <div class="err-text" *ngIf="(email?.dirty || email?.touched) && email?.invalid">
             <div *ngIf="email?.hasError('required')">
@@ -14,7 +14,7 @@
         </div>
     </div>
     <div class="input-field">
-        <i class="icon fa-solid fa-lock"></i>
+        <span class="icon material-icons">password</span>
         <input placeholder="Type Password" class="text-field" type="password" formControlName="password">
         <div class="err-text" *ngIf="(password?.dirty || password?.touched) && password?.invalid">
             <div *ngIf="password?.hasError('required')">
@@ -32,7 +32,7 @@
         </div>
     </div>
     <div class="input-field">
-        <i class="icon fa-solid fa-unlock"></i>
+        <span class="icon material-icons">key</span>
         <input placeholder="Renter Password" class="text-field" type="text" formControlName="renterPassword">
         <div class="err-text" *ngIf="(renterPassword?.dirty || renterPassword?.touched) && renterPassword?.invalid">
             <div *ngIf="renterPassword?.hasError('required')">
