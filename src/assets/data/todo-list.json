@@ -1,44 +1,56 @@
 {
     "matchResults" : [
         {
+            "id": "1",
             "title": "My First Todo List - 1",
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque sint pariatur laborum! Minima obcaecati ut dolor perferendis reprehenderit nesciunt recusandae tempore. Minus ducimus doloremque vero quaerat beatae, minima voluptate sequi unde velit eveniet, hic dicta fugit nesciunt harum ea at esse reiciendis officia sapiente explicabo, optio corrupti rem repellendus. Exercitationem?",
             "lastUpdated": "8/19/23 12:30:30 AM",
+            "status": "0",
             "isPinned": true,
             "pinnedPosition": 3
         },
         {
+            "id": "1",
             "title": "My First Todo List -  3",
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque sint pariatur laborum! Minima obcaecati ut dolor perferendis reprehenderit nesciunt recusandae tempore. Minus ducimus doloremque vero quaerat beatae, minima voluptate sequi unde velit eveniet, hic dicta fugit nesciunt harum ea at esse reiciendis officia sapiente explicabo, optio corrupti rem repellendus. Exercitationem?",
             "lastUpdated": "8/19/23 12:30:30 AM",
+            "status": "1",
             "isPinned": true,
             "pinnedPosition": 1
         },
         {
+            "id": "1",
             "title": "My First Todo List - 2",
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque sint pariatur laborum! Minima obcaecati ut dolor perferendis reprehenderit nesciunt recusandae tempore. Minus ducimus doloremque vero quaerat beatae, minima voluptate sequi unde velit eveniet, hic dicta fugit nesciunt harum ea at esse reiciendis officia sapiente explicabo, optio corrupti rem repellendus. Exercitationem?",
             "lastUpdated": "8/19/23 12:30:30 AM",
+            "status": "2",
             "isPinned": true,
             "pinnedPosition": 2
         },
         {
+            "id": "1",
             "title": "My First Todo List",
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque sint pariatur laborum! Minima obcaecati ut dolor perferendis reprehenderit nesciunt recusandae tempore. Minus ducimus doloremque vero quaerat beatae, minima voluptate sequi unde velit eveniet, hic dicta fugit nesciunt harum ea at esse reiciendis officia sapiente explicabo, optio corrupti rem repellendus. Exercitationem?",
             "lastUpdated": "8/19/23 12:30:30 AM",
+            "status": "1",
             "isPinned": false,
             "pinnedPosition": null
         },
         {
+            "id": "1",
             "title": "My First Todo List",
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque sint pariatur laborum! Minima obcaecati ut dolor perferendis reprehenderit nesciunt recusandae tempore. Minus ducimus doloremque vero quaerat beatae, minima voluptate sequi unde velit eveniet, hic dicta fugit nesciunt harum ea at esse reiciendis officia sapiente explicabo, optio corrupti rem repellendus. Exercitationem?",
             "lastUpdated": "8/19/23 12:30:30 AM",
+            "status": "1",
             "isPinned": false,
             "pinnedPosition": null
         },
         {
+            "id": "1",
             "title": "My First Todo List",
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque sint pariatur laborum! Minima obcaecati ut dolor perferendis reprehenderit nesciunt recusandae tempore. Minus ducimus doloremque vero quaerat beatae, minima voluptate sequi unde velit eveniet, hic dicta fugit nesciunt harum ea at esse reiciendis officia sapiente explicabo, optio corrupti rem repellendus. Exercitationem?",
             "lastUpdated": "8/19/23 12:30:30 AM",
+            "status": "1",
             "isPinned": false,
             "pinnedPosition": null
         }

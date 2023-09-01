@@ -1,0 +1,33 @@
+<div class="edit-background">
+    <div class="edit-container">
+        <form class="edit-form" [formGroup]="editForm">
+            <div class="input-field">
+                <label for="todoTitle">Todo Title</label>
+                <input type="text" name="todoTitle" placeholder="Add Title" formControlName="title">
+            </div>
+            <div class="input-field text-area">
+                <label for="description">Description</label>
+                <textarea name="description" placeholder="Add description" formControlName="description"></textarea>
+            </div>
+            <div class="input-field">
+                <label for="startDate">Start date</label>
+                <input type="datetime-local" name="startDate" formControlName="startDate" [min]="todayDate">
+            </div>
+            <div class="input-field">
+                <label for="endDate">End date</label>
+                <input type="datetime-local" name="endDate" formControlName="endDate" [min]="startDate?.value">
+            </div>
+            <div class="input-field">
+                <label for="status">Status</label>
+                <select name="status">
+                    <option *ngFor="let val of status" [ngValue]="val">{{val}}</option>
+                </select>
+            </div>
+            <div class="save-btn">
+                <button type="button" (click)="saveForm()">Save & Close</button>
+                &nbsp;
+                <button type="button" (click)="exit()">Exit</button>
+            </div>
+        </form>
+    </div>
+</div>

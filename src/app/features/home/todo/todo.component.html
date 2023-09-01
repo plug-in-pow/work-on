@@ -10,10 +10,11 @@
         <div [ngClass]="viewDashboard ? 'card-row' : 'card-column'" *ngFor="let todo of todoList">
             <h3>{{todo.title}}</h3>
             <p>{{todo.description}}</p>
+            <p><b>Status: </b><span class="status-box" [ngClass]="{'one': todo.status === 'Todo', 'two': todo.status === 'In Progress', 'three': todo.status === 'Completed'}">{{todo.status}}</span></p>
             <div class="bottom-section">
                 <span>{{todo.lastUpdated}}</span>
-                <span class="material-icons" [ngClass]="todo.isPinned ? 'icon-pin-active' : 'icon-pin-inactive'" title="Pin Task">push_pin</span>
-                <span class="material-icons" [style.color]="'red'" title="Delete Task">delete_outline</span>
+                <span class="material-icons" (click)="pinTask(todo.id)" [ngClass]="todo.isPinned ? 'icon-pin-active' : 'icon-pin-inactive'" title="Pin Task">push_pin</span>
+                <span class="material-icons" (click)="deleteTask(todo.id)" [style.color]="'red'" title="Delete Task">delete_outline</span>
             </div>
         </div>
     </div>
@@ -23,7 +24,9 @@
             <span>Start creating Todo using + Add Todo button</span>
         </div>
     </div>
-    <button class="add-btn" type="button">
+    <button class="add-btn" type="button" (click)="openEditTodo()">
         <span class="material-icons">add</span>Add Todo
     </button>
 </div>
+
+<app-edit-todo *ngIf="!hideEditForm" (hideDashBoard)="hideDashboardInParent($event)"></app-edit-todo>

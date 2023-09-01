@@ -10,12 +10,15 @@ export class TodoComponent implements OnInit {
 
   viewDashboard: boolean = true;
   todoList: any = [];
+  hideEditForm: boolean = true;
+  progressStatus: string[] = ['Todo', 'In Progress', 'Completed']
 
   constructor(private todoService:TodoService) { }
 
   ngOnInit(): void {
     this.todoService.getTodoList().subscribe(res => {
-      this.todoList = [];
+      this.todoList = res.matchResults;
+      this.todoList.forEach((obj:any) => obj.status = this.progressStatus[obj.status])
       this.todoList.sort((a: any,b: any) => {
         if(a.isPinned){
           if(a.pinnedPosition > b.pinnedPosition){
@@ -33,6 +36,22 @@ export class TodoComponent implements OnInit {
 
   toggleView() {
     this.viewDashboard = !this.viewDashboard;
+  }
+
+  hideDashboardInParent(hide: boolean) {
+    this.hideEditForm = hide;
+  }
+
+  openEditTodo() {
+    this.hideEditForm = false;
+  }
+
+  pinTask(id: string) {
+
+  }
+
+  deleteTask(id: string) {
+
   }
 
 }

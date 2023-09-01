@@ -7,6 +7,8 @@ import { RightSectionComponent } from './right-section/right-section.component';
 import { TodoComponent } from './todo/todo.component';
 import { CalenderComponent } from './calender/calender.component';
 import { SettingsComponent } from './settings/settings.component';
+import { EditTodoComponent } from './todo/components/editTodo/edit-todo/edit-todo.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -17,11 +19,13 @@ import { SettingsComponent } from './settings/settings.component';
     RightSectionComponent,
     TodoComponent,
     CalenderComponent,
-    SettingsComponent
+    SettingsComponent,
+    EditTodoComponent
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class HomeModule { }

@@ -1,0 +1,67 @@
+.edit-background {
+    position: fixed;
+    z-index: 1040;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(39 39 39 / 75%);
+}
+
+.edit-container {
+    width: 450px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 2%;
+}
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    label {
+        font-size: 15px;
+    }
+    textarea {
+        resize: none;
+        height: 100px !important;
+        padding-top: 10px;
+    }
+    input ,textarea, select {
+        border: 1px solid rgb(201, 201, 201);
+        border-radius: 10px;
+        height: 40px;
+        padding-inline-start: 10px;
+        padding-inline-end: 10px;
+    }
+    input:focus, textarea:focus, select:focus {
+        outline: none;
+    }
+}
+
+.save-btn {
+    text-align: right;
+    button:nth-child(1) {
+        padding: 2% 3%;
+        border: none;
+        border-radius: 10px;
+        background-color: rgb(48, 32, 129);
+        color: white;
+        cursor: pointer;
+    }
+    button:nth-child(2) {
+        padding: 2% 3%;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+}

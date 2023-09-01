@@ -41,12 +41,12 @@
     padding: 10px;
     border-radius: 10px;
     width: 200px;
-    height: 200px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 10px;
-    p {
+    p:nth-child(2) {
         overflow: hidden;
     }
 }
@@ -69,7 +69,7 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 10px;
-    p {
+    p:nth-child(2) {
         overflow: hidden;
     }
 }
@@ -113,4 +113,22 @@
     color: white;
     font-size: 15px;
     cursor: pointer;
+}
+
+.status-box {
+    border-radius: 8px;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.one {
+    background-color: #fbeecf;
+}
+
+.two {
+    background-color: #cfecfb;
+}
+
+.three {
+    background-color: #cffbcf;
 }
