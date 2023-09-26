@@ -19,18 +19,6 @@ export class TodoComponent implements OnInit {
     this.todoService.getTodoList().subscribe(res => {
       this.todoList = res.matchResults;
       this.todoList.forEach((obj:any) => obj.status = this.progressStatus[obj.status])
-      this.todoList.sort((a: any,b: any) => {
-        if(a.isPinned){
-          if(a.pinnedPosition > b.pinnedPosition){
-            return 1;
-          }else if(a.pinnedPosition < b.pinnedPosition){
-            return -1;
-          }else{
-            return 0;
-          }
-        }
-        return 0;
-      })
     })
   }
 

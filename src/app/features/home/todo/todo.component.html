@@ -13,7 +13,6 @@
             <p><b>Status: </b><span class="status-box" [ngClass]="{'one': todo.status === 'Todo', 'two': todo.status === 'In Progress', 'three': todo.status === 'Completed'}">{{todo.status}}</span></p>
             <div class="bottom-section">
                 <span>{{todo.lastUpdated}}</span>
-                <span class="material-icons" (click)="pinTask(todo.id)" [ngClass]="todo.isPinned ? 'icon-pin-active' : 'icon-pin-inactive'" title="Pin Task">push_pin</span>
                 <span class="material-icons" (click)="deleteTask(todo.id)" [style.color]="'red'" title="Delete Task">delete_outline</span>
             </div>
         </div>
