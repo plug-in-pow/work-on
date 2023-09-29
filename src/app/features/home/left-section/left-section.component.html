@@ -16,11 +16,13 @@
                 <div class="count">0</div>
             </div>
         </button>
-        <span class="section-title">Others</span>
-        <button *ngFor="let tab of otherTabs" type="button" class="nav-btn" (click)="onTabClick(tab.id)" [ngClass]="{'selected': tab.active}" [routerLink]="[tab.route]">
-            <span class="material-icons">{{tab.icon}}</span>
-            {{tab.id | titlecase}}
-        </button>
+        <ng-template *ngIf="false">
+            <span class="section-title">Others</span>
+            <button *ngFor="let tab of otherTabs" type="button" class="nav-btn" (click)="onTabClick(tab.id)" [ngClass]="{'selected': tab.active}" [routerLink]="[tab.route]">
+                <span class="material-icons">{{tab.icon}}</span>
+                {{tab.id | titlecase}}
+            </button>
+        </ng-template>
     </div>
     <div class="bottom-profile">
         <div class="bottom-container">
