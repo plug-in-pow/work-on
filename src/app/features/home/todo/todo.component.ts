@@ -11,7 +11,8 @@ export class TodoComponent implements OnInit {
   viewDashboard: boolean = true;
   todoList: any = [];
   hideEditForm: boolean = true;
-  progressStatus: string[] = ['Todo', 'In Progress', 'Completed']
+  progressStatus: string[] = ['Todo', 'In Progress', 'Completed'];
+  selectedTodo: any = {};
 
   constructor(private todoService:TodoService) { }
 
@@ -31,11 +32,13 @@ export class TodoComponent implements OnInit {
   }
 
   openEditTodo() {
+    this.selectedTodo = {};
     this.hideEditForm = false;
   }
 
-  pinTask(id: string) {
-
+  openTodo(todo: any) {
+    this.selectedTodo = todo;
+    this.hideEditForm = false;
   }
 
   deleteTask(id: string) {

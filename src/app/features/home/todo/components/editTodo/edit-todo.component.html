@@ -9,18 +9,16 @@
                 <label for="description">Description</label>
                 <textarea name="description" placeholder="Add description" formControlName="description"></textarea>
             </div>
-            <div class="input-field">
-                <label for="startDate">Start date</label>
-                <input type="datetime-local" name="startDate" formControlName="startDate" [min]="todayDate">
-            </div>
-            <div class="input-field">
-                <label for="endDate">End date</label>
-                <input type="datetime-local" name="endDate" formControlName="endDate" [min]="startDate?.value">
+            <div class="input-field date-section">
+                <label for="startDate">Start</label>
+                <input type="date" name="startDate" formControlName="startDate" [min]="todayDate">
+                <label for="endDate">End</label>
+                <input type="date" name="endDate" formControlName="endDate" [min]="startDate?.value">
             </div>
             <div class="input-field">
                 <label for="status">Status</label>
                 <select name="status">
-                    <option *ngFor="let val of status" [ngValue]="val">{{val}}</option>
+                    <option *ngFor="let val of status" [ngValue]="val" [selected]="statusField?.value === val">{{val}}</option>
                 </select>
             </div>
             <div class="save-btn">

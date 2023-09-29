@@ -7,7 +7,7 @@
         </div>
     </div>
     <div [ngClass]="viewDashboard ? 'todo-list-row' : 'todo-list-column'">
-        <div [ngClass]="viewDashboard ? 'card-row' : 'card-column'" *ngFor="let todo of todoList">
+        <div [ngClass]="viewDashboard ? 'card-row' : 'card-column'" *ngFor="let todo of todoList" (click)="openTodo(todo)">
             <h3>{{todo.title}}</h3>
             <p>{{todo.description}}</p>
             <p><b>Status: </b><span class="status-box" [ngClass]="{'one': todo.status === 'Todo', 'two': todo.status === 'In Progress', 'three': todo.status === 'Completed'}">{{todo.status}}</span></p>
@@ -28,4 +28,4 @@
     </button>
 </div>
 
-<app-edit-todo *ngIf="!hideEditForm" (hideDashBoard)="hideDashboardInParent($event)"></app-edit-todo>
+<app-edit-todo *ngIf="!hideEditForm" (hideDashBoard)="hideDashboardInParent($event)" [todoData]="selectedTodo"></app-edit-todo>
